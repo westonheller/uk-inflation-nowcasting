@@ -24,15 +24,15 @@ The current model uses an OLS regression framework with a rolling training windo
 Key Findings
 -
 
-\- Exchange rates were the strongest predictor in this model. GBP/USD movements showed the largest relationship with UK CPI inflation, highlighting the importance of exchange rate pass-through.
+- Exchange rates were the strongest predictor in this model. GBP/USD movements showed the largest relationship with UK CPI inflation, highlighting the importance of exchange rate pass-through.
 
-\- Oil prices had a smaller direct effect than expected. This might reflect the fact that oil is priced in USD, meaning some of its effect is captured indirectly through exchange rate movements.
+- Oil prices had a smaller direct effect than expected. This might reflect the fact that oil is priced in USD, meaning some of its effect is captured indirectly through exchange rate movements.
 
-\- The unemployment and inflation relationship was unstable in this sample, reflecting the difficulty of applying simple Phillips Curve relationships during periods of large economic shocks.
+- The unemployment and inflation relationship was unstable in this sample, reflecting the difficulty of applying simple Phillips Curve relationships during periods of large economic shocks.
 
-\- Inflation relationships changed significantly after 2022. The model identifies a structural break around the Russia-Ukraine energy shock, with forecasting accuracy deteriorating during this period.
+- Inflation relationships changed significantly after 2022. The model identifies a structural break around the Russia-Ukraine energy shock, with forecasting accuracy deteriorating during this period.
 
-\- Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
+- Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
 Latest Nowcast
