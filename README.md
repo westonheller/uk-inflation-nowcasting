@@ -4,14 +4,14 @@
 A Python-based inflation nowcasting project exploring whether publicly available economic indicators can be used to estimate UK CPI inflation before the official ONS release.
 
 
-📌 Motivation
+Motivation
 -
 
 During my economics degree and placement at the Office for National Statistics, I've become interested in how macroeconomic data is produced, interpreted and used to inform policy decisions. After gaining experience working with Python and economic statistics, I wanted to apply these skills independently and build this simple inflation nowcasting model.
 
 The aim of this project is to try to explore the challenges involved in predicting inflation in real time: which indicators are informative, how quickly economic shocks feed through into prices, and why inflation forecasting remains difficult even for professional forecasters.
 
- 📊 Project Overview
+ Project Overview
  -
 
 This project is inspired by real-time forecasting approaches used by institutions such as the Bank of England and OBR.
@@ -21,7 +21,7 @@ The model combines publicly available UK and international economic indicators f
 The current model uses an OLS regression framework with a rolling training window, allowing it to adapt to changes in inflation dynamics over time.
 
 
-🔍 Key Findings
+Key Findings
 -
 
 \- Exchange rates were the strongest predictor in this model. GBP/USD movements showed the largest relationship with UK CPI inflation, highlighting the importance of exchange rate pass-through.
@@ -35,7 +35,8 @@ The current model uses an OLS regression framework with a rolling training windo
 \- Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
-## 📈 Latest Nowcast
+Latest Nowcast
+-
 
 | Metric | Value |
 |---|---|
@@ -46,7 +47,7 @@ The current model uses an OLS regression framework with a rolling training windo
 | **BoE projection (Q2 2026)** | ~3.1% |
 | **Official ONS release** | 22 July 2026 |
 
-🧠 Methodology
+Methodology
 -
 
 **Data**
@@ -110,7 +111,7 @@ uk-inflation-nowcasting/
 ```
 
 
-🚀 How to Run
+How to Run
 -
 
 1\. Clone repo: `git clone https://github.com/westonheller/uk-inflation-nowcasting`
@@ -124,7 +125,7 @@ uk-inflation-nowcasting/
 5\. Run notebooks in order (01 → 05)
 
 
-⚠️ Limitations
+Limitations
 -
 
 This is a relatively simple forecasting model, and has several limitations: 
@@ -136,7 +137,7 @@ This is a relatively simple forecasting model, and has several limitations:
 - Wage data uses a FRED series based on the ONS Average Weekly Earnings dataset due to formatting challenges with the original ONS files.
 
 
-💡 Reflections
+Reflections
 -
 
 Building this model highlighted some of the challenges involved in real-time economic forecasting:
@@ -146,13 +147,13 @@ Building this model highlighted some of the challenges involved in real-time eco
 - Data availability and publication lags are important practical constraints when forecasting economic indicators.
 - Even relatively simple forecasting models require careful decisions around variable selection, transformations and evaluation
 
-🔭 Possible Extensions
+Possible Extensions
 -
 
 Potential extensions could include comparing alternative forecasting approaches, incorporating additional economic indicators, and improving automation of the data pipeline.
 
 
-👤 Author
+Author
 -
 
 Weston Heller | University of Sheffield BSc Economics Student | Linkedin: www.linkedin.com/in/weston-heller | Email: westonheller145@gmail.com
