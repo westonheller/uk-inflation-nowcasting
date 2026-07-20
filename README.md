@@ -1,29 +1,36 @@
-\# 🇬🇧 UK CPI Inflation Nowcasting Model
+\# UK CPI Inflation Nowcasting Model
 
 
+A Python-based inflation nowcasting project exploring whether publicly available economic indicators can be used to estimate UK CPI inflation before the official ONS release.
 
-A data pipeline and forecasting model that predicts UK CPI inflation before the official ONS release, using real-time economic indicators.
 
+\## 📌 Motivation
+
+During my economics degree and placement at the Office for National Statistics, I've become interested in how macroeconomic data is produced, interpreted and used to inform policy decisions. After gaining experience working with Python and economic statistics, I wanted to apply these skills independently and build this simple inflation nowcasting model.
+
+The aim of this project is to try to explore the challenges involved in predicting inflation in real time: which indicators are informative, how quickly economic shocks feed through into prices, and why inflation forecasting remains difficult even for professional forecasters.
 
 
 \## 📊 Project Overview
 
-This project replicates the nowcasting workflow used by institutions like the Bank of England and OBR. It automatically pulls data from the FRED API and ONS publications to generate monthly CPI forecasts using linear regression with a rolling training window.
+This project is inspired by real-time forecasting approaches used by institutions such as the Bank of England and OBR.
 
+The model combines publicly available UK and international economic indicators from ONS and FRED to generate monthly CPI inflation nowcasts before the official ONS release.
+
+The current model uses an OLS regression framework with a rolling training window, allowing it to adapt to changes in inflation dynamics over time.
 
 
 \## 🔍 Key Findings
 
-\- Exchange rate pass-through (GBP/USD) dominates the model — the strongest predictor of UK inflation
+\- Exchange rates were the strongest predictor in this model. GBP/USD movements showed the largest relationship with UK CPI inflation, highlighting the importance of exchange rate pass-through.
 
-\- Oil prices show a smaller direct effect than expected, likely because oil is USD-priced and its effect is partly absorbed by GBP/USD
+\- Oil prices had a smaller direct effect than expected. This might reflect the fact that oil is priced in USD, meaning some of its effect is captured indirectly through exchange rate movements.
 
-\- Unemployment is positively correlated with CPI in this sample, contradicting the Phillips Curve — consistent with known empirical puzzles in UK data
+\- The unemployment and inflation relationship was unstable in this sample, reflecting the difficulty of applying simple Phillips Curve relationships during periods of large economic shocks.
 
-\- The model identifies a clear structural break in 2022 caused by the Russia-Ukraine energy shock. Pre-2022 MAE is 1.15pp vs 2.48pp over the full test period — consistent with failures seen in institutional forecasting models (BoE, OBR)
+\- Inflation relationships changed significantly after 2022. The model identifies a structural break around the Russia-Ukraine energy shock, with forecasting accuracy deteriorating during this period.
 
-\- A rolling 60-month window model improves R² from -0.445 to +0.222 by adapting to changing inflation dynamics
-
+\- Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
 \## 📈 Latest Nowcast
@@ -44,6 +51,27 @@ This project replicates the nowcasting workflow used by institutions like the Ba
 
 | \*\*Official ONS release\*\* | 22 July 2026 |
 
+\## 🧠 Methodology
+
+\Data
+
+\The model uses:
+\- UK CPI inflation
+\- Brent crude oil prices
+\- GBP/USD exchange rate
+\- UK wage growth
+\- UK unemployment
+\- US CPI inflation
+
+\Variables are transformed and lagged where appropriate to reflect economic transmission delays.
+
+\Model
+
+\- Model: Ordinary Least Squares (OLS) regression
+\- Training approach: 60-month rolling estimation window
+\- Evaluation: Out-of-sample testing covering the post-2021 inflation surge
+
+\The purpose of the rolling window approach is to allow the model to adjust when relationships between economic variables change.
 
 
 \## 📁 Data Sources
@@ -100,7 +128,7 @@ uk-inflation-nowcasting/
 
 \## 🚀 How to Run
 
-1\. Clone repo: `git clone https://github.com/yourusername/uk-inflation-nowcasting`
+1\. Clone repo: `git clone https://github.com/westonheller/uk-inflation-nowcasting`
 
 2\. Install dependencies: `pip install -r requirements.txt`
 
@@ -111,30 +139,32 @@ uk-inflation-nowcasting/
 5\. Run notebooks in order (01 → 05)
 
 
-
-\## 🧠 Methodology
-
-\- \*\*Features:\*\* oil prices, GBP/USD exchange rate, UK wage growth and unemployment — all with economically motivated lags (1-3 months) to capture transmission delays
-
-\- \*\*Model:\*\* OLS linear regression with a 60-month rolling training window to account for structural breaks
-
-\- \*\*Evaluation:\*\* Train on 80% of data (2001-2021), test on 20% (2021-2026)
-
-
-
 \## ⚠️ Limitations
 
-\- Linear model cannot capture nonlinear inflation dynamics
+\This is a relatively simple forecasting model, and has several limitations: 
 
-\- Wide confidence intervals reflect genuine uncertainty in inflation forecasting
+\- Linear regression cannot capture nonlinear relationships between economic variables.
+\- Forecast uncertainty is high, particularly during periods of large economic shocks.
+\- Real-time forecasting is constrained by data publication lags.
+\- CPI data requires manual updating due to limitations with accessing ONS data programmatically.
+\- Wage data uses a FRED series based on the ONS Average Weekly Earnings dataset due to formatting challenges with the original ONS files.
 
-\- ONS API was unavailable during development — CPI data requires manual monthly download of mm23.xlsx
 
-\- Wage data uses FRED mirror of ONS AWE series (LCEAMN01GBM661S) due to ONS file formatting issues
+\## 💡 Reflections
 
+Building this model highlighted some of the challenges involved in real-time economic forecasting:
+
+- Economic relationships can change significantly during periods of major shocks, such as the 2022 energy crisis.
+- Simple models can provide useful insights but struggle when inflation dynamics change rapidly.
+- Data availability and publication lags are important practical constraints when forecasting economic indicators.
+- Even relatively simple forecasting models require careful decisions around variable selection, transformations and evaluation
+
+\## 🔭 Possible Extensions
+
+Potential extensions could include comparing alternative forecasting approaches, incorporating additional economic indicators, and improving automation of the data pipeline.
 
 
 \## 👤 Author
 
-Weston Heller | University of Sheffield Economics Student | www.linkedin.com/in/weston-heller | westonheller145@gmail.com
+Weston Heller | University of Sheffield BSc Economics Student | Linkedin: www.linkedin.com/in/weston-heller | westonheller145@gmail.com
 
