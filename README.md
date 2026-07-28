@@ -35,17 +35,19 @@ Key Findings
 - Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
-Latest Nowcast
--
+## Latest Nowcast Accuracy Check
 
 | Metric | Value |
 |---|---|
 | **Forecast month** | June 2026 |
-| **Point estimate** | 3.57% |
+| **Model prediction** | 3.57% |
 | **95% interval** | [-0.78%, 7.92%] |
+| **Actual June CPI (ONS, 22 July 2026)** | 2.6% |
+| **Forecast error** | +0.97pp (overestimate) |
 | **Previous CPI (May 2026)** | 2.80% |
 | **BoE projection (Q2 2026)** | ~3.1% |
-| **Official ONS release** | 22 July 2026 |
+
+The model overestimated June CPI by 0.97pp. Notably, the BoE's own projection (~3.1%) also overestimated, suggesting the downwards surprise was driven by factors outside standard forecasting models, in particular a sharp fall in fuel prices in June 2026. The actual reading fell within the model's 95% confidence interval.
 
 Methodology
 -
@@ -156,5 +158,5 @@ Potential extensions could include comparing alternative forecasting approaches,
 Author
 -
 
-Weston Heller | University of Sheffield BSc Economics Student | Linkedin: www.linkedin.com/in/weston-heller | Email: westonheller145@gmail.com
+Weston Heller | University of Sheffield | Email: westonheller145@gmail.com | Linkedin: www.linkedin.com/in/weston-heller
 
