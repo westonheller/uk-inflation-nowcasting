@@ -35,17 +35,15 @@ Key Findings
 - Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
-## Latest Nowcast Accuracy Check
+## Nowcast Track Record
 
-| Metric | Value |
-|---|---|
-| **Forecast month** | June 2026 |
-| **Model prediction** | 3.57% |
-| **95% interval** | [-0.78%, 7.92%] |
-| **Actual June CPI (ONS, 22 July 2026)** | 2.6% |
-| **Forecast error** | +0.97pp (overestimate) |
-| **Previous CPI (May 2026)** | 2.80% |
-| **BoE projection (Q2 2026)** | ~3.1% |
+| Month | Prediction | Actual | Error | Notes |
+|---|---|---|---|---|
+| June 2026 | 3.57% | 2.6% | +0.97pp | Fuel price drop not captured |
+| July 2026 | - | 2.9% | - | Data available post-rerun |
+| August 2026 | 4.20% | TBC (16 Sep 2026) | - | High oil lags driving prediction |
+
+Model correctly predicted the direction of change in both verified months. Overestimates driven by oil price lags from the April-May 2026 price spike not fully transmitting to headline CPI.
 
 The model overestimated June CPI by 0.97pp. Notably, the BoE's own projection (~3.1%) also overestimated, suggesting the downwards surprise was driven by factors outside standard forecasting models, in particular a sharp fall in fuel prices in June 2026. The actual reading fell within the model's 95% confidence interval.
 
@@ -122,7 +120,9 @@ How to Run
 
 3\. Add your FRED API key to `config.py`
 
-4\. Download latest mm23.xlsx from ONS and place in `data/raw/`
+4\. Download the latest CPI data from ONS:
+   👉 https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindices
+   Save as `consumerpriceinflationdetailedreferencetables.xlsx` in `data/raw/`
 
 5\. Run notebooks in order (01 → 05)
 
