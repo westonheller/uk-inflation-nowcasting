@@ -35,17 +35,18 @@ Key Findings
 - Rolling estimation improved model performance. A 60-month rolling window increased out-of-sample R² from -0.445 to +0.222 by allowing the model to adapt to changing inflation dynamics.
 
 
-## Nowcast Track Record
+## Latest Nowcast
 
-| Month | Prediction | Actual | Error | Notes |
-|---|---|---|---|---|
-| June 2026 | 3.57% | 2.6% | +0.97pp | Fuel price drop not captured |
-| July 2026 | - | 2.9% | - | Data available post-rerun |
-| August 2026 | 4.20% | TBC (16 Sep 2026) | - | High oil lags driving prediction |
+| Metric | Value |
+|---|---|
+| **Forecast month** | August 2026 |
+| **Model prediction** | 4.20% |
+| **95% interval** | [-0.17%, 8.57%] |
+| **Previous CPI (July 2026)** | 2.90% |
+| **BoE projection (Q3 2026)** | ~3.0% |
+| **Official ONS release** | 16 September 2026 |
 
-Model correctly predicted the direction of change in both verified months. Overestimates driven by oil price lags from the April-May 2026 price spike not fully transmitting to headline CPI.
-
-The model overestimated June CPI by 0.97pp. Notably, the BoE's own projection (~3.1%) also overestimated, suggesting the downwards surprise was driven by factors outside standard forecasting models, in particular a sharp fall in fuel prices in June 2026. The actual reading fell within the model's 95% confidence interval.
+The model predicts a rise in August CPI to 4.20%, driven by lagged oil price effects from the April-May 2026 spike. The BoE projects inflation to remain just under 3% in Q3 2026, suggesting the model may be overestimating the pass-through from energy prices.
 
 Methodology
 -
