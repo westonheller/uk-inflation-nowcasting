@@ -112,20 +112,21 @@ uk-inflation-nowcasting/
 ```
 
 
-How to Run
--
+## How to Run
 
-1\. Clone repo: `git clone https://github.com/westonheller/uk-inflation-nowcasting`
+1. Clone repo: `git clone https://github.com/westonheller/uk-inflation-nowcasting`
 
-2\. Install dependencies: `pip install -r requirements.txt`
+2. Install dependencies: `pip install -r requirements.txt`
 
-3\. Add your FRED API key to `config.py`
+3. Add your FRED API key to `config.py`
 
-4\. Download the latest CPI data from ONS:
+4. Create the raw data folder: `mkdir data/raw data/processed`
+
+5. Download the latest CPI data from ONS:
    👉 https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindices
    Save as `consumerpriceinflationdetailedreferencetables.xlsx` in `data/raw/`
 
-5\. Run notebooks in order (01 → 05)
+6. Run notebooks in order (01 → 05)
 
 
 Limitations
