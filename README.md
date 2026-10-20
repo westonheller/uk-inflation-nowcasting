@@ -123,7 +123,7 @@ uk-inflation-nowcasting/
 4. Create the raw data folder: `mkdir data/raw data/processed`
 
 5. Download the latest CPI data from ONS:
-   👉 https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindices
+    https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindices
    Save as `consumerpriceinflationdetailedreferencetables.xlsx` in `data/raw/`
 
 6. Run notebooks in order (01 → 05)
