@@ -39,14 +39,14 @@ Key Findings
 
 | Metric | Value |
 |---|---|
-| **Forecast month** | August 2026 |
-| **Model prediction** | 4.20% |
-| **95% interval** | [-0.17%, 8.57%] |
-| **Previous CPI (July 2026)** | 2.90% |
+| **Forecast month** | September 2026 |
+| **Model prediction** | 3.91% |
+| **95% interval** | [-0.46%, 8.29%] |
+| **Previous CPI (August 2026)** | 3.10% |
 | **BoE projection (Q3 2026)** | ~3.0% |
-| **Official ONS release** | 16 September 2026 |
+| **Official ONS release** | 21 October 2026 |
 
-The model predicts a rise in August CPI to 4.20%, driven by lagged oil price effects from the April-May 2026 spike. The BoE projects inflation to remain just under 3% in Q3 2026, suggesting the model may be overestimating the pass-through from energy prices.
+August nowcast (4.20%) vs actual (3.1%): overestimated by 1.1pp. The rise was driven by motor fuel prices, with petrol reaching its highest price since November 2022. Actual CPI fell within the model's 95% confidence interval.
 
 Methodology
 -
