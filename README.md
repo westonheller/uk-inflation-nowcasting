@@ -39,14 +39,20 @@ Key Findings
 
 | Metric | Value |
 |---|---|
-| **Forecast month** | September 2026 |
-| **Model prediction** | 3.91% |
-| **95% interval** | [-0.46%, 8.29%] |
-| **Previous CPI (August 2026)** | 3.10% |
-| **BoE projection (Q3 2026)** | ~3.0% |
-| **Official ONS release** | 21 October 2026 |
+| **Forecast month** | November 2026 |
+| **Model prediction** | 4.45% |
+| **95% interval** | [0.08%, 8.82%] |
+| **Previous CPI (October 2026)** | 3.60% |
+| **Official ONS release** | 16 December 2026 |
 
-August nowcast (4.20%) vs actual (3.1%): overestimated by 1.1pp. The rise was driven by motor fuel prices, with petrol reaching its highest price since November 2022. Actual CPI fell within the model's 95% confidence interval.
+**Track record**
+
+| Month | Prediction | Actual | Error |
+|---|---|---|---|
+| August 2026 | 4.20% | 3.1% | +1.1pp |
+| September 2026 | 3.91% | 3.5% | +0.41pp |
+
+The model overestimated in both months, though the miss shrank as fuel prices pushed actual inflation up. The actual figure fell inside the 95% interval both times, but the interval is very wide (around 8-9pp), so that is not a demanding test.
 
 Methodology
 -
