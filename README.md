@@ -52,7 +52,7 @@ Key Findings
 | August 2026 | 4.20% | 3.1% | +1.1pp |
 | September 2026 | 3.91% | 3.5% | +0.41pp |
 
-The model overestimated in both months, though the miss shrank as fuel prices pushed actual inflation up. The actual figure fell inside the 95% interval both times, but the interval is very wide (around 8-9pp), so that is not a demanding test.
+The model overestimated in both months, though the miss shrank as fuel prices pushed actual inflation up. The actual figure fell inside the 95% interval both times, but the interval is very wide (around 8-9pp), so it is not a demanding test.
 
 Methodology
 -
